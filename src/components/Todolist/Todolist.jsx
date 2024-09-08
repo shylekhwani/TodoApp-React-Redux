@@ -9,7 +9,7 @@ return(
     <div>
         {todos.map(todoitem => {
             return(
-                <Todoitem key={todoitem.id} text={todoitem.text} iscompleted={todoitem.completed} />
+                <Todoitem key={todoitem.id} id={todoitem.id} text={todoitem.text} iscompleted={todoitem.completed} />
             )
         })}
     </div>
