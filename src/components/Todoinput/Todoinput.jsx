@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux"
-import { AddTodoActionCreator } from "../../Redux/Action/ActionCreators"
+// import { AddTodoActionCreator } from "../../Redux/Action/ActionCreators"
+import { addTodo } from "../Slices (Redux-Toolkit)/todoSlice"
 
 function Todoinput(){
 
@@ -9,7 +10,7 @@ function Todoinput(){
     const dispatch = useDispatch()// This dispatch is already connected to store
 
     function addTodoToStore(){ 
-        dispatch(AddTodoActionCreator(todo))
+        dispatch(addTodo(todo))
         setTodo('')
     }
 

@@ -1,19 +1,20 @@
 import { useDispatch } from "react-redux"
-import { RemoveTodoActionCreator } from "../../Redux/Action/ActionCreators"
+// import { RemoveTodoActionCreator } from "../../Redux/Action/ActionCreators"
+import { removeTodo } from "../Slices (Redux-Toolkit)/todoSlice"
 
 function Todoitem({id,text,iscompleted,}){
  
     const dispatch = useDispatch()
 
-    function removeTodo(){
-        dispatch(RemoveTodoActionCreator(id))
+    function RemoveTodoitem(){
+        dispatch(removeTodo(id))
     }
 
     return(
         <div className="">
          <input type="checkbox" checked={iscompleted} />
          <p> {text} </p>
-         <button onClick={removeTodo}>X</button>
+         <button onClick={RemoveTodoitem}>X</button>
         </div>
     )
 }

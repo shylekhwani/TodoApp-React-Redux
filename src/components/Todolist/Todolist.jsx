@@ -3,7 +3,9 @@ import { useSelector } from 'react-redux'
 
 function Todolist(){
 
-const todos = useSelector(state => state.todosState.todos); //using this hook we can access whole state.
+// const todos = useSelector(state => state.todosState.todos); //using this hook we can access whole state.
+
+  const todos = useSelector(state => state.todos);// We mentioned 'todos' in configure store
 
 return( 
     <div>
